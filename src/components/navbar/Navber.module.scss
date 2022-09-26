@@ -1,0 +1,126 @@
+$color: #333;
+
+* {
+    margin: 0;
+    box-sizing: none;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: #18181B;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    >img {
+
+        padding: 5px 30px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px 55px 32px 15px;
+        box-shadow: 0px 0px 16px;
+        animation: image 5s infinite forwards;
+    }
+
+    @keyframes image {
+        0% {
+            border-radius: 10px 55px 32px 15px;
+        }
+
+        20% {
+            border-radius: 20px 35px 50px 35px;
+        }
+
+        40% {
+            border-radius: 10px 70px 22px 45px;
+        }
+
+        60% {
+            border-radius: 40px 5px 72px 55px;
+        }
+
+        80% {
+            border-radius: 55px 55px 55px 55px;
+        }
+
+        100% {
+            border-radius: 90px 5px 12px 35px;
+        }
+    }
+
+    a {
+        font-size: 0.8rem;
+        color: #fff;
+    }
+
+    .menu {
+        display: flex;
+        text-align: center;
+
+        >li {
+            padding: 1rem;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    .mobile_btn {
+        display: none;
+    }
+
+    @media screen and (max-width: 720px) {
+        .mobile_btn {
+            display: block;
+            position: absolute;
+            right: 1rem;
+            margin-top: -0px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            justify-content: center;
+            left: -100%;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            color: #fff;
+            background-color: #18181B;
+            z-index: 10;
+            transition: left 1s;
+        }
+
+        .active {
+            left: 0;
+
+        }
+
+        a {
+            font-size: 1.2rem;
+        }
+    }
+
+}

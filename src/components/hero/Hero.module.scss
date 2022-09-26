@@ -1,0 +1,109 @@
+
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1583&q=80') no-repeat center/cover;
+    display: flex;
+    width: 100%;
+    height: 500px;
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 700px;
+        margin: auto;
+        margin-top: 10%;
+        padding: 6px 15px;
+        background-color: rgba(238, 238, 238, 0.801);
+        box-shadow: 0px 0px 16px rgb(141, 136, 136);
+        border-radius: 25px;
+    }
+
+    form>div>lable {
+        font-size: .8rem;
+        padding-bottom: 2px;
+    }
+
+    .text,
+    .from,
+    .Until {
+        display: flex;
+        color: black;
+        flex-direction: column;
+    }
+
+    input {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        background-color: rgba(49, 49, 49, 0);
+        border: none;
+        color: rgb(0, 0, 0);
+        outline: none;
+
+    }
+
+    .from,
+    .Until {
+        border-left: 2px solid #fff;
+        padding-left: 5px;
+        color: black;
+    }
+
+    .search_btn {
+        display: flex;
+        align-items: center;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    @media screen and (max-width:720px) {
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 79%;
+            margin-top: auto 1rem;
+        }
+
+        .text,
+        .from,
+        .Until {
+            width: 100%;
+            border-left: none;
+            border-bottom: 2px solid rgb(0, 0, 0);
+            padding: 10px;
+        }
+
+        .search_btn {
+            width: 100%;
+            padding: 8px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 8px 100px;
+            margin-top: 10px;
+            color: #fff;
+            background-color: rgb(75, 0, 161);
+            border: none;
+            font-weight: 600;
+            border-radius: 20px;
+        }
+
+        .btn:hover {
+            transition: 0.5s;
+            background-color: rgb(102, 0, 255);
+        }
+
+        .icon {
+            display: none;
+        }
+
+
+    }
+
+
+}
